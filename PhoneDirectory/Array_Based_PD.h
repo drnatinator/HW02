@@ -56,6 +56,9 @@ public:
 private:
 	class Directory_Entry
 	{
+		std::string name;
+		std::string number;
+
 	public:
 		Directory_Entry() {} // Default no-argument constructor 
 
@@ -76,9 +79,6 @@ private:
 			number = new_number;
 		}
 
-	private:
-		string name;
-		string number;
 	};
 
 
