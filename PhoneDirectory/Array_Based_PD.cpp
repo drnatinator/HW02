@@ -8,6 +8,7 @@
 #include <fstream>
 #include <istream>
 #include <ostream>
+#include <iostream>
 
 using namespace std;
 
@@ -116,19 +117,17 @@ void Phone_Directory::save()
 string Phone_Directory::remove_entry(const string& name) // Completed by Eben Schumann. Exercise 1.7 was my part of this group project.
 {
 	int index = find(name);
-
 	if (index != -1) {
+		string number = the_directory[index].get_number();
 		for (int i = index; i < size - 1; i++) {
 			the_directory[i] = the_directory[i + 1];
-			std::cout << the_directory[i + 1].get_number;
 		}
+		size--;
+		modified = true;
+		return name;
 	} else { 
 		return "";
 	}
-	// Hint: you can use the code below to shift names down in the directory to remove the selected entry specified by "index"
-	
-		
-
 	
 }
 
